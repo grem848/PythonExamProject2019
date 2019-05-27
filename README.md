@@ -1,5 +1,11 @@
 # Group Good Awareness Exam Project
 
+### Group Members:
+- Rasmus Jarnborg Friis
+- Mohammad Hariri
+- Mette Rytt
+- Andreas Guldborg Heick
+
 ## Natural Language Processing
 Using technologies from the whole semester, we want to build a natural language processing script that can clean, analyze and visualize textdata.
 
