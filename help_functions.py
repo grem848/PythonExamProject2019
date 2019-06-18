@@ -1,4 +1,5 @@
 import requests
+import time
 from bs4 import BeautifulSoup
 from multiprocessing import Pool, cpu_count
 
@@ -15,7 +16,7 @@ def url_to_transcript(url):
     page = requests.get(url).text
     soup = BeautifulSoup(page, "lxml")
     text = [p.text for p in soup.find(class_="transcript-inner").find_all('p')]
-    print('Downloading transcript from ' + url)
+#     print('Downloading transcript from ' + url)
     return text
 
 def combine_text(list_of_text):
