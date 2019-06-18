@@ -1,7 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
+from multiprocessing import Pool, cpu_count
 
 # url = sys.argv[1:]
+
+def url_to_transcript_parallel(urls):
+    workers = cpu_count()
+    pool = Pool(processes=workers)
+    result = pool.map(url_to_transcript, urls)
+    return result
 
 def url_to_transcript(url):
     '''Returns transcripts from millercenter.org'''
